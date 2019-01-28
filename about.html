@@ -1,0 +1,139 @@
+<!doctype html> 
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #4B9CD3"> <!-- tar heels baby!-->
+                <a class="navbar-brand" href="index.html">
+                    <img src="Old_Well_Graphic_2_facebook.jpg" width=30 height=40 alt="old well">
+                    Trauma Ready
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="team.html">Team</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Deliverables
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="deliverables/specifications.html">Specifications</a>
+                                <a class="dropdown-item" href="deliverables/design.html">Design Document</a>
+                                <a class="dropdown-item" href="deliverables/testing.html">Test Plan</a>
+                                <a class="dropdown-item" href="deliverables/manual.html">User Manual</a>
+                                <a class="dropdown-item" href="deliverables/code.html">Code</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mr-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html">Calendar</a>
+                        </li>    
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h1>About</h1>        
+                    <p>
+                        Paramedics currently use a system of physical notecards to decide 
+                        where to transport a trauma patient and at which activation level. 
+                        Unfortunately, the criteria for transport is confusing and non-standardized 
+                        at different hospitals around North Carolina. This forces EMTs to read through 
+                        a series of checklists and facilities while in a high-pressure, time-sensitive 
+                        environment. 
+                    </p>
+                    <p>
+                        Our application will provide a reference for these teams in the field so they 
+                        have easier access to information and can make fast, correct routing decisions. 
+                        Its design focus is to be simple, intuitive, and accessible in all environments 
+                        - particularly the dim lighting in the back of an ambulance or helicopter. To 
+                        maximize engagement, we will be developing cross platform with 
+                        <a href="https://facebook.github.io/react-native/">React Native</a>. Lastly, as 
+                        activation criterias change the information provided by the app will be easily 
+                        updatable through an administrator web portal.                        
+                    </p>
+                    <p>
+                        Throughout the semester this page will be updated with pictures, demos, and 
+                        feature descriptions as our development progresses. 
+                    </p>      
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer" style="background-color: rgba(34, 34, 34, 1); color: white;">
+            <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <h5>About</h5>
+                            <span style="color: #999999;">
+                                COMP 523, Spring 2019<br>
+                                Instructors: Dr. Stotts, Dr. Terrell<br>
+                                Built in collaboration with UNC Health Care<br>
+                            </span>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                            <h5>Team</h5>
+                            <span style="color: #999999;">
+                                Ben Trybulski<br>
+                                Andrew Tanaka<br>
+                                Przemek Pudelko<br>
+                                Clark Davis
+                            </span>
+                        </div>
+                        <div class="col col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                            <h5>Contact</h5>
+                            <span class="text-primary">comp523.unc.smarts@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            <br><br>
+        </footer>
+    
+        <style>
+        /* Sticky footer styles
+        -------------------------------------------------- */
+        html {
+            position: relative;
+            height: 900px;
+            min-height: 100%;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 250;
+            line-height: 24px; /* Vertically center the text there */
+        }
+        </style>
+
+        <!-- Bootstrap supporting JS -->        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+</html>

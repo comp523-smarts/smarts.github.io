@@ -1,0 +1,39 @@
+Team Introductions
+- Al, Julie, and Brian 
+
+3 different EMS agencies, 300 different employees, different agencies transport differently
+Trying to keep up with all trauma activations is problematic; multiple types of activations 
+
+Function: 
+- EMS picks someone up, operates off destination protocols to figure out where to transport patients for appropriate care
+- Severe injuries are time sensitive - paramedic need to stabilize patient and determine how to best transport them 
+	(drive vs airfare, route to close regional hospital vs far large hospital, how to choose different activation levels) 
+- Full-tier (red) vs partial-tier (yellow) activations alert different levels of staff to handle trauma 
+	- Different hospitals use different terminology (red/yellow, first/second, alpha/bravo)
+	- Different hospitals use different criteria to evaluate
+- Paramedics have to shuffle through cards to make decisions; cards fit in a back pocket 
+
+Goal: 
+- Place to keep all information available on demand and accessible in a logical way 
+- Paramedics can use a device (e.g. mobile phone, easily usable in field) and ED’s can use a computer
+
+Design: 
+- Color coding ideal, but everyone’s different
+- Quick reference 
+- Easily updated by non-technical administrators as trauma activations and criteria change 
+- GPS(?) questionable, might be complex and cannot afford unreliability but otherwise helpful - changes with air transport
+- Basic information about services offered at different trauma centers
+- Summoning air transport(?)
+- Android and Apple (50:50), night and day options, high contrast and easy to see is essential
+- No need for decision aid; just easy information access
+
+- Easy information access and organization — essential
+- Easily updatable information for administrators — essential
+- Recommendation engine based on trauma descriptions(?) — nice-to-haves
+
+- Reference cards as checklists
+- Decisions for which hospital and which activation level 
+- Making decisions explicitly communicated 
+
+Priorities: 
+- End-user focus 
