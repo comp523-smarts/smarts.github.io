@@ -37,11 +37,11 @@ document.write('\
                                 Deliverables\
                             </a>\
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">\
-                                <a class="dropdown-item" href="deliverables/specifications.html">Specifications</a>\
-                                <a class="dropdown-item" href="deliverables/design.html">Design Document</a>\
-                                <a class="dropdown-item" href="deliverables/testing.html">Test Plan</a>\
-                                <a class="dropdown-item" href="deliverables/manual.html">User Manual</a>\
-                                <a class="dropdown-item" href="deliverables/code.html">Code</a>\
+                                <a class="dropdown-item" href="specifications.html">Specifications</a>\
+                                <a class="dropdown-item" href="design.html">Design Document</a>\
+                                <a class="dropdown-item" href="testing.html">Test Plan</a>\
+                                <a class="dropdown-item" href="manual.html">User Manual</a>\
+                                <a class="dropdown-item" href="code.html">Code</a>\
                             </div>\
                         </li>\
                         <li class="nav-item">\
