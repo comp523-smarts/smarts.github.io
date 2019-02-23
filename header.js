@@ -12,6 +12,7 @@ document.write('\
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"\
          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">\
         <link rel="stylesheet" href="style.css">\
+        <title>Trauma Ready</title>\
     </head>\
     \
     <body>\
@@ -47,9 +48,6 @@ document.write('\
                         <li class="nav-item">\
                             <a class="nav-link" href="calendar.html">Calendar</a>\
                         </li>    \
-                        <li class="nav-item">\
-                            <a class="nav-link" href="blog.html">Blog</a>\
-                        </li>\
                     </ul>\
                 </div>\
             </nav>\
