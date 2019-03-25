@@ -43,6 +43,7 @@ document.write('\
                                 <a class="dropdown-item" href="testing.html">Test Plan</a>\
                                 <a class="dropdown-item" href="manual.html">User Manual</a>\
                                 <a class="dropdown-item" href="code.html">Code</a>\
+                                <a class="dropdown-item" href="apples.html">APPLES Reflection 1</a>\
                             </div>\
                         </li>\
                         <li class="nav-item">\
