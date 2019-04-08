@@ -41,7 +41,7 @@ document.write('\
                                 <a class="dropdown-item" href="specifications.html">Specifications</a>\
                                 <a class="dropdown-item" href="design.html">Design Document</a>\
                                 <a class="dropdown-item" href="testing.html">Test Plan</a>\
-                                <a class="dropdown-item" href="manual.html">User Manual</a>\
+                                <a class="dropdown-item" href="https://github.com/comp523-trauma-ready/trauma-ready/blob/master/README.md">Documentation</a>\
                                 <a class="dropdown-item" href="code.html">Code</a>\
                                 <a class="dropdown-item" href="apples.html">APPLES Reflection 1</a>\
                             </div>\
