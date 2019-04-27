@@ -47,6 +47,9 @@ document.write('\
                             </div>\
                         </li>\
                         <li class="nav-item">\
+                            <a class="nav-link" href="presentations.html">Presentations</a>\
+                        </li>    \
+                        <li class="nav-item">\
                             <a class="nav-link" href="calendar.html">Calendar</a>\
                         </li>    \
                     </ul>\
