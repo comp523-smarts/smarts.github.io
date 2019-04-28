@@ -51,12 +51,11 @@ document.write('\
                                 Milestones\
                             </a>\
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">\
-                                <a class="dropdown-item" href="">Team Rules & Coding Practices</a>\
-                                <a class="dropdown-item" href="">Project Concept</a>\
-                                <a class="dropdown-item" href="">User Stories</a>\
-                                <a class="dropdown-item" href="">Platform Selection</a>\
-                                <a class="dropdown-item" href="">Project Plan</a>\
-                                <a class="dropdown-item" href="">Architecture Diagram</a>\
+                                <a class="dropdown-item" href="team.html">Team Rules & Coding Practices</a>\
+                                <a class="dropdown-item" href="notes/project-concept.pdf">Project Concept</a>\
+                                <a class="dropdown-item" href="specifications.html">User Stories</a>\
+                                <a class="dropdown-item" href="notes/platform-selection.pdf">Platform Selection</a>\
+                                <a class="dropdown-item" href="architecture_diagram.png">Architecture Diagram</a>\
                             </div>\
                         </li>\
                         <li class="nav-item">\

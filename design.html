@@ -88,7 +88,7 @@
 </p>
 
 <div class="data-obj">
-<h5>Hospital</h5>
+<h4 style="text-align: center; padding-bottom: 12px">Hospital</h4>
 <table class="table table-striped" style="text-align: center;">
     <tr scope="row">
         <th>Field</th>
@@ -154,7 +154,7 @@
 </div>
 
 <div class="data-obj">
-<h5>RAC</h5>
+<h4 style="text-align: center; padding-bottom: 12px">RAC</h4>
 <table class="table table-striped" style="text-align: center;">
     <tr scope="row">
         <th>Field</th>
@@ -185,7 +185,7 @@
 </div>
 
 <div class="data-obj">
-<h5>Activation</h5>
+<h4 style="text-align: center; padding-bottom: 12px">Activation</h4>
 <table class="table table-striped" style="text-align: center;">
     <tr scope="row">
         <th>Field</th>
@@ -226,6 +226,81 @@
 </div>
 
 
+<div class="data-obj">
+<h4 style="text-align: center; padding-bottom: 12px">Trauma</h4>
+<table class="table table-striped" style="text-align: center;">
+    <tr scope="row">
+        <th>Field</th>
+        <th>Type</th>
+        <th>Constraints</th>
+    </tr>
+    <tr scope="row">
+        <td scope="col">tid</td>
+        <td>Number</td>
+        <td>Required, Unique, <br>Autoincremented</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">name</td>
+        <td>String</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">criteria</td>
+        <td>[String]</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">activationCodes</td>
+        <td>[String]</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">notes</td>
+        <td>String</td>
+        <td>-</td>
+    </tr>
+</table>
+</div>
+
+
+<div class="data-obj">
+<h4 style="text-align: center; padding-bottom: 12px">User</h4>
+<table class="table table-striped" style="text-align: center;">
+    <tr scope="row">
+        <th>Field</th>
+        <th>Type</th>
+        <th>Constraints</th>
+    </tr>
+    <tr scope="row">
+        <td scope="col">name</td>
+        <td>String</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">email</td>
+        <td>String</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">password</td>
+        <td>String</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">date</td>
+        <td>Date</td>
+        <td>Defaults to present</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">trauma</td>
+        <td>[String]</td>
+        <td>Required</td>
+    </tr>
+</table>
+</div>
+
+
+
 <style type="text/css">
     .data-obj {
         margin-left: auto;
@@ -238,6 +313,32 @@
 <br>
 
 <h4>Design Rationale</h4>
+<p>
+    Ultimately, our design was centered around creating two applications that stay synchronized
+    because they talk to the same backend. Our choice to design a REST API was mostly 
+    based on simplicity and the nature of our other tools -- JSON is easy to understand and 
+    convenient to work with in JavaScript, and React Native life cycle methods make it easy to 
+    perform network requests that load in data as soon as certain screens render.
+</p>
+<p>
+    In designing our database, we were left with the challenging task of creating generalized 
+    schemas with only a few samples of the data that would actually go into it. Scalability was 
+    a priority, but we knew that the maximum amount of data we ever need to support would be 
+    relatively small: there are only <a href="https://www2.ncdhhs.gov/dhsr/EMS/trauma/traumarac.html">
+    8 regional advisory committees</a>, 12 trauma centers, and 126 hospitals in North Carolina. 
+    Therefore, we chose schemas that prioritized ease of implementation rather than optimizing 
+    for minimal storage/query time. 
+</p>
+<p>
+    Our code has very few dependencies aside from by Expo, Express, and Mongoose. We take this 
+    as a sign that we chose good tools, as they've been mostly comprehensive enough to support
+    all the functionality we need. Smaller libraries that play a role include 
+    <a href="http://www.passportjs.org">Passport.js</a> for login authentication, 
+    <a href="https://github.com/expressjs/body-parser">Body Parser</a>for reading JSON request bodies
+    on the backend, and the <a href="https://reactnavigation.org"> React Navigation</a> community 
+    library for setting up tab and stack-based navigation. All of our dependencies are also open
+    source and popular solutions within the JavaScript community. 
+</p>
 
 </div>
 </div>
