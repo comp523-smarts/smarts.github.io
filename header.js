@@ -38,19 +38,32 @@ document.write('\
                                 Deliverables\
                             </a>\
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">\
-                                <a class="dropdown-item" href="specifications.html">Specifications</a>\
-                                <a class="dropdown-item" href="design.html">Design Document</a>\
-                                <a class="dropdown-item" href="testing.html">Test Plan</a>\
-                                <a class="dropdown-item" href="https://github.com/comp523-trauma-ready/trauma-ready/blob/master/README.md">Documentation</a>\
-                                <a class="dropdown-item" href="code.html">Code</a>\
+                                <a class="dropdown-item" href="specifications.html">D1. Specifications</a>\
+                                <a class="dropdown-item" href="design.html">D2. Design Document</a>\
+                                <a class="dropdown-item" href="testing.html">D3. Test Plan</a>\
+                                <a class="dropdown-item" href="documentation.html">D4. Documentation</a>\
+                                <a class="dropdown-item" href="code.html">D5. Code</a>\
                                 <a class="dropdown-item" href="apples.html">APPLES Reflection 1</a>\
+                            </div>\
+                        </li>\
+                        <li class="nav-item dropdown">\
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">\
+                                Milestones\
+                            </a>\
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">\
+                                <a class="dropdown-item" href="">Team Rules & Coding Practices</a>\
+                                <a class="dropdown-item" href="">Project Concept</a>\
+                                <a class="dropdown-item" href="">User Stories</a>\
+                                <a class="dropdown-item" href="">Platform Selection</a>\
+                                <a class="dropdown-item" href="">Project Plan</a>\
+                                <a class="dropdown-item" href="">Architecture Diagram</a>\
                             </div>\
                         </li>\
                         <li class="nav-item">\
                             <a class="nav-link" href="presentations.html">Presentations</a>\
                         </li>    \
                         <li class="nav-item">\
-                            <a class="nav-link" href="calendar.html">Calendar</a>\
+                            <a class="nav-link" href="calendar.html">Meetings</a>\
                         </li>    \
                     </ul>\
                 </div>\

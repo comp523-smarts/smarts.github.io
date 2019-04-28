@@ -16,14 +16,14 @@ body {
     background-color: #f5f5f5;
 }
 
-.dropdown-item li, p {
+
+.dropdown-item li {
     width: 80%;
 }
 
-.jumbotron p {
+.jumbotron > p {
     width: 100%;
 }
-/* Custom stuff */
-h1 {
-    margin-bottom: 24px;
+
+p {
 }

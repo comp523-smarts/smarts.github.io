@@ -1,11 +1,250 @@
 <script src="header.js"></script>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h1>Design</h1>
-            <a href="notes/platform-selection.pdf"><h4>Platform Selection</h4></a>
-            <a href="notes/architecture-diagram.pdf"><h4>Architecture Diagram</h4></a>
-        </div>
-    </div>
+<div class="container" style="text-align: justify; ">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+<h1>Design Document</h1>
+<hr>
+
+<h4>Architecture</h4>
+<p>
+    The overall design of our application is depicted in the following diagram:
+</p>
+<img 
+    src="./architecture_diagram.png" 
+    alt="architecture diagram" 
+    style="display: block; margin-left: auto; margin-right: auto; width: 60%; padding: 18px">
+<p>
+    Beginning with the top left, we have server-side code that is written in JavaScript, driven
+    by the Node.js engine, and hosted on Heroku's free-tier cloud platform. This code exposes a set
+    of RESTful endpoints that act as an interface between the web/mobile frontends and the MongoDB
+    database where all application data is persistently stored. While our MongoDB instance is also
+    hosted on Heroku, it lives in a separate dyno (i.e. either a different server, or a virtualized
+    machine on the same server) so database queries are networked. In particular, we use the 
+    <a href="https://mongoosejs.com">Mongoose</a> ORM library to validate documents against structured
+    object models before storing them permanently in the database. Lastly, the Google Maps Geocoding
+    API is used to automatically get latitude/longitude data whenever a new Hospital is added to the
+    database. 
+</p>
+<p>
+    Next, we have two independent codebases on the client-side:
+    <ol>
+        <li>An administrator portal, written with the Handlebars templating engine and standard CSS/jQuery</li>
+        <li>A mobile app, written in React Native and supported by the Expo SDK</li>
+    </ol>
+</p>
+<p>
+    Web pages in the administrator portal are generated from Handlebars templates and served by the 
+    backend upon first request, but all subsequent interactions occur via AJAX requests. The operations 
+    supported (create, read, update, destroy) for admins are simple enough that jQuery was sufficient
+    to build an interactive dashboard. 
+</p>
+<p>
+    On the other hand, all data presented in the mobile app is requested on launch via the native
+    <a href="https://developer.mozilla.org/en/docs/Web/API/Fetch_API">fetch</a> API. This allows 
+    additions/updates to information by administrators to instantaneoulsy propagate to end-users, but
+    also causes the app to crash if the server crashes. The app also gets permissions from users to 
+    access their latitude and longitude so that distances to hospitals can be displayed. This works
+    cross-platform, and if a user rejects location permissions all other data is still available.
+</p>
+
+<h4>Codebase</h4>
+<p>
+    The codebase is available <a href="https://github.com/comp523-trauma-ready/trauma-ready">here</a>.
+    It is written entirely in JavaScript and its major modules and directory structure are represented
+    by this diagram: 
+    <pre>
+    | trauma-ready
+    |
+    |&mdash;&mdash; tr-backend
+    |   |&mdash;&mdash; public
+    |   |&mdash;&mdash; src
+    |   |   |&mdash;&mdash; config
+    |   |   |&mdash;&mdash; models
+    |   |   |&mdash;&mdash; routes
+    |   |   |&mdash;&mdash; server.js
+    |   |&mdash;&mdash; views
+    |
+    |&mdash;&mdash; tr-frontend
+    |   |&mdash;&mdash; App.js
+    |   |&mdash;&mdash; assets
+    |   |&mdash;&mdash; components
+    |   |&mdash;&mdash; docs
+    |   |&mdash;&mdash; screenshots
+    |   |&mdash;&mdash; tests
+    </pre>
+</p>
+<p>
+    On the backend, "models" defines the database models, "routes" configures the server URLs and 
+    their behavior, "views" contains all the Handlebars templates, and "server.js" is the entry point
+    to the app. On the frontend, "components" contains all the React component files and "App.js" 
+    sets up the app navigation and acts as its entry point as well. 
+</p>
+
+<h4>Data Structures</h4>
+<p>
+    Our database object schemas are all defined with Mongoose under "tr-backend/models". They are 
+    fairly readable by themselves, but here are tabular representations for easier reference: 
+</p>
+
+<div class="data-obj">
+<h5>Hospital</h5>
+<table class="table table-striped" style="text-align: center;">
+    <tr scope="row">
+        <th>Field</th>
+        <th>Type</th>
+        <th>Constraints</th>
+    </tr>
+    <tr scope="row">
+        <td>hid</td>
+        <td>Number</td>
+        <td>Required, Unique</td>
+    </tr>
+    <tr scope="row">
+        <td>name</td>
+        <td>String</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td>rac</td>
+        <td>String</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td>traumaLevel</td>
+        <td>String</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td>services</td>
+        <td>[String]</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td>address</td>
+        <td>String</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td>latitude</td>
+        <td>Number</td> 
+        <td>-</td>
+    </tr>
+    <tr scope="row">
+        <td>longitude</td>
+        <td>Number</td>
+        <td>-</td>
+    </tr>
+    <tr scope="row">
+        <td>phoneDirectory</td>
+        <td>[{ String, String}]</td>
+        <td>-</td>
+    </tr>
+    <tr scope="row">
+        <td>email</td>
+        <td>String</td>
+        <td>-</td>
+    </tr>
+    <tr scope="row">
+        <td>notes</td>
+        <td>String</td>
+        <td>-</td>
+    </tr>
+</table>
 </div>
+
+<div class="data-obj">
+<h5>RAC</h5>
+<table class="table table-striped" style="text-align: center;">
+    <tr scope="row">
+        <th>Field</th>
+        <th>Type</th>
+        <th>Constraints</th>
+    </tr>
+    <tr scope="row">
+        <td scope="col">rid</td>
+        <td>Number</td>
+        <td>Required, Unique, <br>Autoincremented </td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">name</td>
+        <td>String</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">activationCodes</td>
+        <td>[{ Number, String }]</td>
+        <td>-</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">notes</td>
+        <td>String</td>
+        <td>-</td>
+    </tr>
+</table>
+</div>
+
+<div class="data-obj">
+<h5>Activation</h5>
+<table class="table table-striped" style="text-align: center;">
+    <tr scope="row">
+        <th>Field</th>
+        <th>Type</th>
+        <th>Constraints</th>
+    </tr>
+    <tr scope="row">
+        <td scope="col">aid</td>
+        <td>Number</td>
+        <td>Required, Unique, <br>Autoincremented</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">name</td>
+        <td>String</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">age</td>
+        <td>String</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">rac</td>
+        <td>String</td>
+        <td>-</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">trauma</td>
+        <td>[String]</td>
+        <td>Required</td>
+    </tr>
+    <tr scope="row">
+        <td scope="col">notes</td>
+        <td>String</td>
+        <td>-</td>
+    </tr>
+</table>
+</div>
+
+
+<style type="text/css">
+    .data-obj {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        width: 60%;
+    }
+</style>
+<br>
+
+<h4>Design Rationale</h4>
+
+</div>
+</div>
+</div>
+
 <script src="footer.js"></script>
+<!-- 
+<a href="notes/platform-selection.pdf"><h4>Platform Selection</h4></a>
+<a href="notes/architecture-diagram.pdf"><h4>Architecture Diagram</h4></a>
+ -->

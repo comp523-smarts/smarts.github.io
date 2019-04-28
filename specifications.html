@@ -1,170 +1,264 @@
 <script src="header.js"></script>
 <div class="container">
-  <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-      <h1>Specifications</h1>
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<h1>Specifications</h1>
 
-      <ul>
-        <li><b><a href="notes/project-concept.pdf">Concept</a></b></li>
-        <li>
-          <b>Tweet</b>: A cross-platform mobile app which helps paramedics navigate the trauma 
-          activation criteria of different trauma centers in NC
-        </li>
-      </ul>
+<p><b>Tweet:</b> A simple mobile app for routing EMTs through regional trauma centers in NC</p>
+<p><a href="notes/project-concept.pdf">Project Concept (deliverable)</a></p>
 
-      <h2>User Stories</h2>
-      <hr>
-      <b>As a User:</b>
-      <ul>
-        <li>I want a cross-platform mobile app so that I can access the information I need on-the-go and from any device</li>
-        <li>I want a high-contrast display that is visible in low-lighting so that I can read the information in dark environments</li>
-        <li>I want to access activation cards for different trauma centers with as few clicks as possible so that I can quickly get the information I need</li>
-        <li>I want a simple user interface so that I can get to my information without the app design getting in the way</li>        
-        <li>I want an app that contains activation, service, and contact information for each hospital in one place so I don't have to look it up multiple times</li>
-        <li>I want an app that continues to work without internet so that it's reliable and useful in areas with poor connectivity</li> 
-        <li>I potentially want an app that assists me in making my routing decisions by providing recommendations based on GPS</li>
-        <li>I potentially want to view activation criteria as listed on the app so that I can get the information online as well as on mobile</li>
-        <li>I potentially want to search for activation cards by trauma criteria so that I can find relevant trauma centers without having to guess and check</li>
-        <li>I potentially want an app that provides information on routing and traffic so that I can get directions more efficiently</li>
-        <li>I potentially want a mobile app that notifies the selected trauma center of the activation code and related information so that the patient can relieve faster treatment upon arriving</li>
-      </ul>
+<hr>
 
-      <b>As an Admin:</b>
-      <ul>
-        <li>I want to update activation criteria on the app without having a technical background so that I can present paramedics with the latest information</li>
-        <li>I want the mobile app to refresh quickly when I make administrator updates so all paramedics are immediately receiving the same information</li>
-        <li>I want to use a login-based web portal to update my criteria so I can input information easily via keyboard</li>
-        <li>I potentially want a quick tutorial on how to use the web portal so I understand how my actions affect the app better</li>
-      </ul>
+<h2>User Stories</h2>
+<br>
+<h4>As a User:</h4>
+<ul>
+    <li>
+        I want a cross-platform mobile app so that I can access the information I need on-the-go and 
+        from any device
+    </li>
+    <li>
+        I want a high-contrast display that is visible in low-lighting so that I can read the 
+        information in dark environments
+    </li>
+    <li>
+        I want to access activation cards for different trauma centers with as few clicks as possible 
+        so that I can quickly get the information I need
+    </li>
+    <li>
+        I want a simple user interface so that I can get to my information without the app design 
+        getting in the way
+    </li>        
+    <li>
+        I want an app that contains activation, service, and contact information for each hospital 
+        in one place so I don't have to look it up multiple times
+    </li>
+    <li>
+        I want an app that continues to work without internet so that it's reliable and useful in 
+        areas with poor connectivity
+    </li> 
+    <li>
+        I potentially want an app that assists me in making my routing decisions by providing 
+        recommendations based on GPS
+    </li>
+    <li>
+        I potentially want to view activation criteria as listed on the app so that I can get the 
+        information online as well as on mobile
+    </li>
+    <li>
+        I potentially want to search for activation cards by trauma criteria so that I can find 
+        relevant trauma centers without having to guess and check
+    </li>
+    <li>
+        I potentially want an app that provides information on routing and traffic so that I can 
+        get directions more efficiently
+    </li>
+    <li>
+        I potentially want a mobile app that notifies the selected trauma center of the activation 
+        code and related information so that the patient can relieve faster treatment upon arriving
+    </li>
+</ul>
 
-      <br>
+<h4>As an Admin:</h4>
+<ul>
+    <li>
+        I want to update activation criteria on the app without having a technical background so 
+        that I can present paramedics with the latest information
+    </li>
+    <li>
+        I want the mobile app to refresh quickly when I make administrator updates so all paramedics
+        are immediately receiving the same information
+    </li>
+    <li>
+        I want to use a login-based web portal to update my criteria so I can input information 
+        easily via keyboard
+    </li>
+    <li>
+        I potentially want a quick tutorial on how to use the web portal so I understand how my 
+        actions affect the app better
+    </li>
+</ul>
 
-      <h2>Requirements</h2>
-      <hr>
-     <h4>Functional</h4> <!-- I/O pairings, i.e. "this behavior produces that result"-->
-      <ul>
-        <li><b>Definite:</b></li>
-          <ul>
-            <li><b>Priority 1</b></li>
-            <ul>
-              <li>Application must provide accurate information on activation code criteria for all trauma centers it
-                records</li>
-              <li>Application must provide accurate information on the services available at different trauma centers</li>
-              <li>Application must provide contact information for each trauma center</li>
-            </ul>
-            <li><b>Priority 2</b></li>
-            <ul>
-              <li>Application must provide information on destination protocols to trauma employees to help determine
-                where to transport trauma patients</li>
-              <li>Application must show closest trauma centers to the user's location, and distance to those trauma
-                centers, via GPS, assuming internet connection is available</li>
-              <li>Application must match trauma experienced by patient with the services available at regional trauma
-                centers to assist the user in deciding where to send the patient</li>
-              <li>Application must allow users to search directly for best-fit activation cards by injury descriptions
-                or trauma center name</li>
-            </ul>
-          </ul>
-        </li>
-        <li>
-          <b>Perhaps:</b>
-          <ul>
-            <li>Application may provide information on how to best transport the patient to the selected trauma center</li>
-            <li>Application may allow users to login/enter a specific code, provided by an Administrator(the user's
-              employer) to gain access to the trauma information of a specific set of regional trauma centers</li>
-            <li>Application may allow administrators to select which regional trauma centers they wish for trauma
-              employees (users) to be allowed access to information on </li>
-          </ul>
-        </li>
-        <li>
-          <b>Improbable:</b>
-          <ul>
-            <li>Application will notify a selected trauma center automatically of an incoming patient's activation code
-              and the medical justification for that activation code</li>
-          </ul>
-        </li>
-      </ul>
+<br>
+<hr>
+<h2>Requirements</h2>
+<br>
 
-      <h4>Non-functional</h4>
-      <h5>Usability</h5>
-      <ul>
+<h4>Functional</h4> <!-- I/O pairings, i.e. "this behavior produces that result"-->
+<ul>
+    <li><b>Definite:</b>
+        <ul>
+            <li>
+                Application must provide accurate information on activation code criteria for all 
+                trauma centers it records
+            </li>
+            <li>
+                Application must provide accurate information on the services available at 
+                different trauma centers
+            </li>
+            <li>
+                Application must provide contact information for each trauma center
+            </li>
+            <li>
+                Application must show closest trauma centers to the user's location, and distance 
+                to those trauma centers, via GPS, assuming internet connection is available
+            </li>
+        </ul>
+    </li>
+
+    <li><b>Perhaps:</b>
+        <ul>
+            <li>
+                Application may provide information on how to best transport the patient to the selected 
+                trauma center
+            </li>
+            <li>
+                Application may allow users to login/enter a specific code, provided by an 
+                Administrator (the user's employer) to gain access to the trauma information of a specific 
+                set of regional trauma centers
+            </li>
+            <li>
+                Application may allow administrators to select which regional trauma centers they wish 
+                for trauma employees (users) to be allowed access to information on
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>Improbable:</b>
+        <ul>
+            <li>
+                Application will notify a selected trauma center automatically of an incoming 
+                patient's activation code and the medical justification for that activation code
+            </li>
+        </ul>
+    </li>
+</ul>
+<br>
+
+<h4>Usability</h4>
+<ul>
+    <li>
+        <b>Perhaps:</b>
+        <ul>
+            <li>
+                Application may provide a tutorial for new users on how to operate the application
+            </li>
+            <li>
+                Web portal may provide a tutorial/documentation for administrators on how to update 
+                information in the application
+            </li>
+        </ul>
+    </li>
+</ul>
+<br>
+
+<h4>Reliability</h4>
+<ul>
+    <li>
+        <b>Definite:</b>
+        <ul>
+            <li>
+                Application must provide some sort of color coding to match with trauma activation 
+                code criteria
+            </li>
+        </ul>
+    <li>
+        <b>Perhaps:</b>
+        <ul>
+            <li>
+                Application may continue to function on a basic level (essentially, all "Definite 
+                Requirements" still function) without an internet connection
+            </li>
+            <li>
+                Application should be readable under extreme lighting conditions (contain a daytime 
+                and nighttime setting)
+            </li>
+        </ul>
+    </li>
+</ul>
+<br>
+
+<h4>Performance</h4>
+<ul>
+    <li>
+        <b>Perhaps:</b>
+        <ul>
         <li>
-          <b>Perhaps:</b>
-          <ul>
-            <li>Application may provide a tutorial for new users on how to operate the application</li>
-            <li>Application's web portal must provide a tutorial/documentation for administrators on how to update
-              information in the application through the web portal</li>
-          </ul>
+            Application must respond to a search query (such as the name of a certain regional 
+            trauma center) fairly quickly
         </li>
-      </ul>
-      <h5>Reliability</h5>
-      <ul>
+        </ul>
+    </li>
+</ul>
+<br>
+
+<h4>Supportability</h4>
+<ul>
+    <li>
+        <b>Definite:</b>
+        <ul>
         <li>
-          <b>Definite:</b>
-          <ul>
-            <li>Application must continue to function on a basic level (essentially, all "Definite Requirements" still
-              function) without an internet connection</li>
-            <li>Application must function under low-light conditions (contain a daytime and nighttime setting)</li>
-            <li>Application must provide some sort of color coding to match with trauma activation code criteria</li>
-          </ul>
+            Application must provide a web portal for administrators to be able to login and 
+            update information within the application, without needing any programming knowledge
         </li>
-      </ul>
-      <h5>Performance</h5>
-      <ul>
         <li>
-          <b>Definite:</b>
-          <ul>
-            <li>Application must respond to a search query (such as the name of a certain regional trauma center)
-              fairly quickly</li>
-          </ul>
+            Application may update every time an Administrator changes information within the 
+            application, in order to keep information up-to-date
         </li>
-      </ul>
-      <h5>Supportability</h5>
-      <ul>
         <li>
-          <b>Definite:</b>
-          <ul>
-            <li>Application must provide a web portal for administrators to be able to login and update information
-              within the application, without needing any programming knowledge</li>
-          </ul>
-          <b>Perhaps:</b>
-          <ul>
-            <li>Application may update every time an Administrator changes information within the application, in order
-              to keep information up-to-date</li>
-            <li>Application may provide the foundation to add further hospital activation criteria, such as stroke or
-              cardiac activation criteria</li>
-            <li>Application may provide the foundation add more regional trauma centers, and their related information,
-              in North Carolina</li>
-          </ul>
+            Application may provide the foundation to add further hospital activation criteria, 
+            such as stroke or cardiac activation criteria
         </li>
-      </ul>
-      <h5>Design</h5>
-      <ul>
         <li>
-          <b>Definite:</b>
-          <ul>
+            Application may provide the foundation add more regional trauma centers, and their 
+            related information, in North Carolina
+        </li>
+        </ul>
+    </li>
+</ul>
+<br>
+
+<h4>Design</h4>
+<ul>
+    <li>
+        <b>Definite:</b>
+        <ul>
             <li>Application must function on iOS and Android</li>
             <li>Application must provide an intuitive layout for users</li>
-            <li>Application connects with a database that stores the information presented on the application, and can
-              be updated through the web portal by an administrator</li>
-          </ul>
-          <b>Improbable:</b>
-          <ul>
-            <li>Application may come in the form of a web/desktop application that can be used by Emergency Department
-              employees on a desktop computer</li>
-          </ul>
-        </li>
-      </ul>
-      <h5>Interface</h5>
-      <ul>
+            <li>
+                Application connects with a database that stores the information presented on the 
+                application, and can be updated through the web portal by an administrator
+            </li>
+        </ul>
+    </li>
+    <li>
+        <b>Improbable:</b>
+        <ul>
         <li>
-          <b>Definite:</b>
-          <ul>
-            <li>Application must communicate with a Geolocation API, to assist trauma employee in finding nearby trauma
-              centers</li>
-          </ul>
+            Application may come in the form of a web/desktop application that can be used by 
+            Emergency Department employees on a desktop computer
         </li>
-      </ul>
-    </div>
-  </div>
+        </ul>
+    </li>
+</ul>
+<br>
+
+<h4>Interface</h4>
+<ul>
+    <li>
+        <b>Definite:</b>
+        <ul>
+            <li>
+                Application must communicate with a Geolocation API, to assist trauma employee in
+                finding nearby trauma centers
+            </li>
+        </ul>
+    </li>
+</ul>
+<br>
+
 </div>
+</div>
+</div>
+
 <script src="footer.js"></script>
