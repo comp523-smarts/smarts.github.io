@@ -1,0 +1,50 @@
+<script src="header.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1>Deploying Updates</h1>
+            <hr>
+            <h2>Updating</h2>
+            <p>To Update the application, first download from the Google Drive (access is held by the client), download
+                the .jks file (<i>trauma-ready.jks</i>) and the .jks.bak file (<i>trauma-ready.jks.bak</i>) and place them in the folder
+                <i>tr-frontend</i>. The most recent apk file for the project will also be found in the Google Drive, but it is not necessary for
+            updating. </p>
+            <p>Next, login to Expo in the Terminal/Command Line in the trauma-ready/tr-frontend directory. Access to this account
+            is also held by the client. Before updating, you just increment the <i>version</i> and <i>versionCode</i> in
+                <i>app.json</i> under <i>tr-frontend</i>. Now, run <b>expo-cli publish</b> (make sure you've installed all dependencies first),
+            and after it has successfully published, it should provide you the URL <i>https://exp.host/@trauma-statt/trauma-ready</i>.
+                If this is true, then run <b>expo-cli android:build</b>. It will ask you if you wish for Expo to build the app signing
+                key for you, or if you wish to add your own. Choose to add your own, and then Expo will proceed to ask for the
+                <b>Key Alias, Keystore password and Key password</b>. These can be found in the Google Drive in the Word document
+                <i>Android Keystore</i>.
+            </p>
+            <p> After some time, in the terminal it should state <b>Successfully built standalone app: </b> and provide a link.
+                   Clicking on this link will download the new apk file for the application. To upload this apk file, login to the
+                   Google Play Developer Console (access is held by the client), click on the application <i>Trauma-STATT</i>,
+                   click on <i>Release Management</i>, then <i>App Releases</i>, and then next to <i>Alpha</i> click on <i>Manage</i>.
+                <b>Note: This is also where you can add or remove testers for the application under <i>Manage Testers</i>. </b>
+            </p>
+            <p>
+                Then click on <i>Create Release</i> and under <i>Android App Bundles and APKs to add</i> you can upload the new APK file.
+                After this, enter a <i>Release Name</i> (it should be the same as version in <i>app.json</i>) and type any Release Notes
+                you wish to add. Once this is done, click on <i>Save</i> and <i>Review</i>, and publish your update.
+            </p>
+
+            <p>Another method for Deploying Updates may perhaps be found
+                <a href="https://docs.expo.io/versions/v32.0.0/distribution/uploading-apps/">here </a>but we have not fully explored this
+                option.</p>
+            <h2>In the Case of Being unable to Update</h2>
+            <p>
+            It is possible that for some reason, you will not be able to update the application, most likely because of some error with the
+                Keystore. If this is the case, you will need to create a new Application in the Google Play Store, clear your expo key
+                credentials, and allow expo to create the signing key for you. Instructions on doing this can be found here:
+                <ul>
+            <li><a href="https://docs.expo.io/versions/v32.0.0/distribution/building-standalone-apps/">Building Standalone Apps</a></li>
+            <li><a href="https://docs.expo.io/versions/v32.0.0/distribution/app-signing/">App Signing</a></li>
+        </ul>
+            </p>
+
+        </div>
+    </div>
+</div>
+<script src="../footer.js"></script>
